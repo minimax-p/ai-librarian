@@ -31,7 +31,7 @@ with gr.Blocks() as demo:
     # File upload section
     with gr.Tab("File Upload"):
         gr.Markdown("## Upload Your Files to the System")
-        file_upload = gr.File(label="Upload Documents", file_count="multiple", type="file")
+        file_upload = gr.File(label="Upload Documents", file_count="multiple", type="filepath")
         file_output = gr.Markdown(label="Uploaded Files")
         file_upload.upload(fn=handle_file_upload, inputs=file_upload, outputs=file_output)
 
