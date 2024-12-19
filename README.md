@@ -17,6 +17,3 @@ Build a local AI-powered librarian application that enables intelligent searchin
 4. Gradio Interface
 5. Conversation Tracking
 
-## Challenges
-1. Integrate 
-- Solution: Use a single document query engine and manage the multi-document search in the backend.

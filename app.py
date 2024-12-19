@@ -25,11 +25,16 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # LLM Config
 from llama_index.llms.openai import OpenAI
 
+from llama_index.llms.ollama import Ollama
+
+llm = Ollama(model="qwen2.5:7b", request_timeout=60.0)
+
+
 # Global variables
-llm = OpenAI(
-    model="gpt-4o-mini",
-    api_key=OPENAI_API_KEY,
-)
+# llm = OpenAI(
+#     model="gpt-4o-mini",
+#     api_key=OPENAI_API_KEY,
+# )
 
 Settings.embed_model = HuggingFaceEmbedding(
     model_name="BAAI/bge-small-en-v1.5"
